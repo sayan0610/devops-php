@@ -5,4 +5,5 @@ RUN a2enmod rewrite
 COPY website/ /var/www/
 RUN chown -R www-data:www-data /var/www
 
+CMD ["php -S localhost:8080"]
 CMD ["start-apache"]
