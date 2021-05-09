@@ -1,6 +1,4 @@
 FROM php:7-apache
-
-COPY start-apache /usr/local/bin
 RUN a2enmod rewrite
 
 # Copy application source
