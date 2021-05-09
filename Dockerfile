@@ -1,5 +1,5 @@
 FROM php:7-apache
-COPY /var/lib/jenkins/workspace/job2/website/  /usr/local/bin
+COPY website/  /usr/local/bin
 RUN  php -S localhost:8080
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY start-apache /usr/local/bin
