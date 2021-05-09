@@ -1,2 +1,2 @@
 FROM php:7.0-apache  
-COPY /website /var/www/php
+COPY . /var/www/php
