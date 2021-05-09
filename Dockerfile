@@ -1,3 +1,2 @@
-FROM php:7.0-apache  
+FROM php:7.3-apache  
 COPY . /var/www/php
-RUN php index.php
