@@ -1,7 +1,11 @@
 FROM php:7-apache
+
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY start-apache /usr/local/bin
 RUN a2enmod rewrite
 
 # Copy application source
-COPY website/ /user/bin/local
+COPY website /website
+RUN chown -R www-data:www-data /website
 
-CMD ["/bin/sh -c 'php -S 0.0.0.0:8080'"]
+CMD ["start-apache"]
