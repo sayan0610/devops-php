@@ -1,2 +1,2 @@
 FROM php:7.3-apache  
-COPY . /var/www/php
+COPY index.php /var/www/html
