@@ -4,4 +4,4 @@ RUN a2enmod rewrite
 # Copy application source
 COPY website/ /user/bin/local
 
-CMD ["/bin/sh -c 'php -S localhost:8080'"]
+CMD ["/bin/sh -c 'php -S 0.0.0.0:8080'"]
